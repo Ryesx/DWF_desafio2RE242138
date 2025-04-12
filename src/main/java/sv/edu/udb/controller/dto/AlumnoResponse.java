@@ -7,9 +7,8 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 public class AlumnoResponse {
-
     private Long id;
     private String nombre;
     private String apellido;
-    private String materia; // Mostramos solo el nombre de la materia
+    private String nombreMateria; // <== cambia el nombre aquí
 }

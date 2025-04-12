@@ -9,10 +9,11 @@ import sv.edu.udb.domain.Materia;
 @Mapper(componentModel = "spring")
 public interface AlumnoMapper {
 
-    // Convierte de DTO a entidad (recibe también la materia para inyectarla)
-    Alumno toAlumno(AlumnoRequest request, Materia materia);
+    // Primero convertimos el DTO a Alumno sin la Materia
+    Alumno toAlumno(AlumnoRequest request);
 
-    // Convierte de entidad a DTO (extrae el nombre de la materia)
-    @Mapping(source = "materia.nombre", target = "materia")
+    // Luego se asigna la materia manualmente desde el servicio
+
+    @Mapping(source = "materia.nombre", target = "nombreMateria")
     AlumnoResponse toResponse(Alumno alumno);
 }

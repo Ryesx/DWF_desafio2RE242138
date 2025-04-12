@@ -42,7 +42,9 @@ public class AlumnoServiceImpl implements AlumnoService {
     public AlumnoResponse save(AlumnoRequest request) {
         Materia materia = materiaRepository.findById(request.getIdMateria())
                 .orElseThrow(() -> new EntityNotFoundException("Materia no encontrada con ID: " + request.getIdMateria()));
-        Alumno alumno = alumnoMapper.toAlumno(request, materia);
+        Alumno alumno = alumnoMapper.toAlumno(request);
+        alumno.setMateria(materia); // ✅ se setea aparte
+
         return alumnoMapper.toResponse(alumnoRepository.save(alumno));
     }
 
