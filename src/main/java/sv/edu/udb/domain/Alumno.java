@@ -11,14 +11,14 @@ import lombok.*;
 public class Alumno {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // ← CAMBIO AQUÍ
     private Long id;
 
     private String nombre;
 
     private String apellido;
 
-    @ManyToOne // Muchos alumnos pueden estar en una misma materia
-    @JoinColumn(name = "id_materia") // Así se guarda como una FK en la tabla
+    @ManyToOne
+    @JoinColumn(name = "id_materia")
     private Materia materia;
 }
