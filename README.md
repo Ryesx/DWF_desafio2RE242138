@@ -113,6 +113,12 @@ DELETE /alumnos/{id}
 
 ## 👨‍💻 Autor
 
+<<<<<<< HEAD
+- Nombre: *[Tu nombre completo aquí]*
+- Universidad Don Bosco
+- Ciclo: I/2025
+=======
 - Nombre: Jose manuel reyes echeverria
 - Universidad Don Bosco
 - Ciclo: I/2025
+>>>>>>> 12aea648dd2566d43e6d910e7abdf465753ef742
