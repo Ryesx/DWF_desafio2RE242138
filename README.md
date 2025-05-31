@@ -96,7 +96,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 ### Pasos
 1. **Clonar el repositorio**
    ```bash
-   git clone https://github.com/tu-usuario/desafio3-spring-security-jwt.git
+   git clone https://github.com/Ryesx/DWF_desafio2RE242138.git
    ```
 
 2. **Configurar XAMPP**
